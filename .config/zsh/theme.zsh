@@ -1,4 +1,6 @@
 
-
 PROMPT='
-[%m@%n %~]$ '
+%B[%n@%m %~]
+$ %b'
+
+RPROMPT='%B%T%b'
