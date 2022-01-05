@@ -1,5 +1,12 @@
+# Clear terminal when starting a new shell
+clear
+echo ""
+
 # I use arch btw
 neofetch
+
+# Enviroment variables
+EDITOR=nvim
 
 # Colors
 autoload -Uz colors && colors
