@@ -3,7 +3,6 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
-
 xwayland enable
 
 
@@ -43,7 +42,7 @@ default_floating_border pixel 0
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Images/arch.png fill
+output * bg ~/.config/sway/bg.png fill
 
 output HDMI-A-1 res 1920x1080@60.000Hz pos 0,0
 output DP-2 res 1920x1080@144.001Hz pos 1920,0
@@ -162,6 +161,19 @@ input "type:keyboard" {
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+    
+    # move workspace to output
+    bindsym $mod+Control+Shift+$left  move workspace to output left
+    bindsym $mod+Control+Shift+$right move workspace to output right
+    bindsym $mod+Control+Shift+$up    move workspace to output up
+    bindsym $mod+Control+Shift+$down  move workspace to output down
+    
+    # move workspace to output with arrow keys
+    bindsym $mod+Control+Shift+Left  move workspace to output left
+    bindsym $mod+Control+Shift+Right move workspace to output right
+    bindsym $mod+Control+Shift+Up    move workspace to output up
+    bindsym $mod+Control+Shift+Down  move workspace to output down
+
 #
 # Layout stuff:
 #
