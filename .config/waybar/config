@@ -1,92 +1,111 @@
-{
-"layer": "top",
-"position": "top",
-"modules-left": ["cpu", "memory", "disk", "custom/cpu-temp", "custom/gpu-temp", "custom/cap-left"],
-"modules-center": ["sway/workspaces"],
-"modules-right": ["custom/cap-right", "network", "clock", "custom/offswitch"],
-"sway/window": {
-},
-"clock": {
-  "format": " {:%a %b %d %H:%M}",
-  "tooltip": false,
-  "min-length": 18,
-},
-"custom/offswitch": {
-  "tooltip": false,
-  "format": "",
-  "interval": "once",
-  "on-click": "systemctl poweroff",
-},
-"network": {
-  "format-wifi": " {essid}",
-  "format-ethernet": " {ipaddr}",
-  "format-linked": " {ifname}",
-  "format-disconnected": " Disconnected",
-  "tooltip": false,
-  "max-length": 20,
-  "min-length": 14,
-  "interval": 10
-},
-"cpu": {
-  "interval": 1,
-  "min-length": 6,
-  "format": " {usage}%",
-  "tooltip": false,
-  "states": {
-  "critical": 90,
+[
+  {
+    "name": "topbar",
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["custom/leftcap", "custom/cpulogo", "cpu", "custom/memorylogo", "memory", "custom/disklogo", "disk", "custom/rightcap"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["custom/leftcap", "custom/networklogo", "network", "custom/rightcap"],
+  
+    "sway/window": {
+      "max-length": 60,
+      "tooltip": false,
+    },
+    "cpu": {
+      "interval": 1,
+      "format": "{usage}%",
+      "tooltip": false, 
+    },
+    "memory": {
+      "interval": 5,
+      "format": "{used:0.1f}G/{total:0.1f}G",
+      "tooltip": false
+    },
+    "disk": {
+      "interval": 60,
+      "format": "{percentage_used}% {path}",
+      "path": "/",
+      "tooltip": false,
+    }, 
+    "network": {
+      "interval": 1,
+      "interface": "enp4s0",
+      "format": "{ifname}",
+      "format-ethernet": "{ifname} {ipaddr}/{cidr} |  {bandwidthUpBits}  {bandwidthDownBits}",
+      "format-disconnected": "Disconnected...",
+      "tooltip": false,
+    },
+
+
+    "custom/cpulogo": {
+      "format": "",
+    },
+    "custom/memorylogo": {
+      "format": "", 
+    },
+    "custom/disklogo": {
+      "format": "",
+    },
+    "custom/networklogo": {
+      "format": "",
+    },
+    "custom/leftcap": {
+      "format": "    ",
+    },
+    "custom/rightcap": {
+      "format": "    ",
+    },
   },
-},
-"temperature": {
-  "tooltip": false,
-  "min-length": 6,
-  "critical-threshold": 90,
-  "format": "{icon} {temperatureC}°C",
-  "format-critical": "{icon} {temperatureC}°C",
-  "format-icons": {
-  "default": ["", "", "", "", ""],
-  },
-},
-"memory": {
-  "interval": 1,
-  "tooltip": false,
-  "format": " {percentage}%",
-  "states": {
-    "critical":90,
-  },
-  "min-length": 5,
-},
-"disk": {
-  "tooltip": false,
-  "path": "/",
-  "interval": 60,
-  "min-length": 5,
-  "format": " {percentage_used}%",
-  "states": {
-  "critical": 90,
-  },
-},
-"sway/workspaces": {
-  "tooltip": false,
-  "disable-scroll": true,
-},
-"custom/cap-left": {
-  "tooltip": false,
-	"format": "",
-},
-"custom/cap-right": {
-  "tooltip": false,
-	"format": "",
-},
-"custom/cpu-temp": {
-  "exec": "sensors coretemp-isa-0000 | xargs | cut -d + -f 2 | cut -d . -f 1",
-  "format": "{}°C",
-  "interval": 5,
-  "tooltip": false
-},
-"custom/gpu-temp": {
-  "exec": "sensors nouveau-pci-0200 | xargs | cut -d + -f 2 | cut -d . -f 1",
-  "format": "{}°C",
-  "interval": 5,
-  "tooltip": false
-},
-}
+
+  {
+    "name": "bottombar",
+    "layer": "top",
+    "position": "bottom",
+    "modules-left": ["custom/logo"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["clock"],
+
+    "custom/logo": {
+      "format": "",
+    },
+
+    "sway/workspaces": {
+      "all-outputs": false,
+      "active-only": false,
+      "format": "{icon}",
+      "on-click": "activate", 
+      "format": "{icon}",
+      "persistent_workspaces": {
+        "1": ["DP-2"],
+        "2": ["DP-2"],
+        "3": ["DP-2"],
+        "4": ["HDMI-A-1"],
+        "5": ["HDMI-A-1"],
+        "6": ["HDMI-A-1"],
+        "7": ["DP-3"],
+        "8": ["DP-3"],
+        "9": ["DP-3"]
+      },
+      "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": "",
+        "urgent": "",
+        "active": "",
+        "default": ""
+      }
+    },
+
+    "clock": {
+      "interval": 60,
+      "format": "{:%d/%m/%Y - %H:%M}",
+      "tooltip": false,
+    },
+  }
+]

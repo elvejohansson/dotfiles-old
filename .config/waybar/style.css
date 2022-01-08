@@ -1,84 +1,123 @@
-@define-color bgcolor #2b2b30;	/* background color */
-@define-color fgcolor #c69843;  /* foreground color */
-@define-color charging #07fb05; /* battery charging color */
-@define-color plugged #acfcad;  /* ac plugged color */
-@define-color critical #ff0000; /* critical color */
-@define-color warning #f3f809;  /* warning color */
-@define-color hover #94a6e3;    /* mouse hover over workspace color */ 
-
+/* Style reset */
 * {
-	border: none;
-	border-radius: 0;
-	min-height: 0;
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 1.75rem;
+  font-family: 'Source Code Pro', sans-serif;
 }
 
-#waybar {
-	background: transparent;
-	font-family: SourceCodePro;
-	font-size: 1rem;
-  font-weight: bold;
-	color: @fgcolor;
+
+
+/* Bar styling */
+.topbar {
+  background: transparent;
+}
+.bottombar {
+  background: transparent; 
 }
 
+
+
+/* Sway workspace styling */
+#workspaces {
+  background: rgba(25, 25, 35, 1);
+  margin: 0 0 0.35rem 0;
+  padding: 0 1.5rem;
+  border-radius: 2rem;
+}
 #workspaces button {
-	padding-left: 10px;
-	padding-right: 10px;
-	color: @bgcolor;
+  padding: 0 0.75rem;
+  color: rgba(255, 255, 255, 1);
+  margin: 0.25rem 0;
 }
-
 #workspaces button.focused {
-	background: @bgcolor;
-	color: @fgcolor;
+  color: rgba(25, 25, 25, 1);
+  background: rgba(163, 183, 200, 1);
+  border-radius: 2rem;
+}
+#workspaces button.urgent {
+  background: #ff0000;
 }
 
-#workspaces button:hover {
-	background: @hover;
-	color: @fgcolor;
-	transition: none;
-	box-shadow: inherit;
-	text-shadow: inherit;
+
+
+/* Sway window styling */
+#window {
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  font-weight: 700;
+  margin: 0.35rem 0 0 0;
+  border-radius: 2rem;
+  background: rgba(25, 25, 35, 1);
 }
 
-#custom-cap-left, #custom-cap-right {
-	color: @bgcolor;
-	font-size: 24px;
-}
 
-#custom-offswitch {
-	background: @bgcolor;
-	padding-right: 20px;
-	padding-left: 10px;
-}
 
-#cpu, 
-#temperature, 
-#memory, 
+/* Clock styling */
+#clock,
+#cpu,
+#memory,
 #disk,
-#custom-cpu-temp,
-#custom-gpu-temp,
-#clock, 
+#network,
+#custom-cpulogo,
+#custom-memorylogo,
+#custom-disklogo,
+#custom-networklogo,
+#custom-logo,
+#custom-leftcap,
+#custom-rightcap {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(25, 25, 35, 1);
+}
+
+
+
+/* Built-in modules */
+#clock {
+  margin: 0 1rem 0.35rem 0;
+  padding: 0 1.5rem;
+  border-radius: 2rem;
+}
+#cpu {
+  margin-top: 0.35rem;
+  padding-right: 1.5rem;
+}
+#memory {
+  margin-top: 0.35rem;
+  padding-right: 1.5rem;
+}
+#disk {
+  margin-top: 0.35rem;
+}
 #network {
-	background: @bgcolor;
-	padding-left: 10px;
-	padding-right: 10px;
+  margin-top: 0.35rem;
 }
 
-#disk.critical {
-		color: @critical;
-}
 
-#temperature.critical {                                                           
-		color: @critical;                                                    
+/* Custom modules */
+#custom-cpulogo,
+#custom-memorylogo,
+#custom-disklogo,
+#custom-networklogo {
+  font-size: 1.65rem;
+  margin-top: 0.35rem;
+  padding: 0.1rem 0.5rem 0 0;
 }
-
-#cpu.critical {                                                           
-		color: @critical;                                                    
+#custom-leftcap {
+  margin: 0.35rem 0 0 1rem;
+  border-radius: 2rem 0 0 2rem;
 }
-
-#memory.critical {                                                           
-		color: @critical;                                                    
+#custom-rightcap {
+  margin: 0.35rem 1rem 0 0;
+  border-radius: 0 2rem 2rem 0;
 }
-
+#custom-logo {
+  font-size: 2rem;
+  margin: 0 0 0.35rem 1rem;
+  padding: 0 1.5rem;
+  border-radius: 2rem;
+}
 

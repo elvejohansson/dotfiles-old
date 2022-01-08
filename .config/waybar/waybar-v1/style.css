@@ -1,0 +1,78 @@
+@define-color bgcolor #2b2b30;	/* background color */
+@define-color fgcolor #c69843;  /* foreground color */
+@define-color charging #07fb05; /* battery charging color */
+@define-color plugged #acfcad;  /* ac plugged color */
+@define-color critical #ff0000; /* critical color */
+@define-color warning #f3f809;  /* warning color */
+@define-color hover #94a6e3;    /* mouse hover over workspace color */ 
+
+* {
+	border: none;
+	border-radius: 0;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#waybar {
+	background: transparent;
+	font-family: SourceCodePro;
+	font-size: 1rem;
+  font-weight: bold;
+	color: @fgcolor;
+}
+
+#workspaces button {
+	padding-left: 10px;
+	padding-right: 10px;
+	color: @bgcolor;
+}
+
+#workspaces button.focused {
+	background: @bgcolor;
+	color: @fgcolor;
+}
+
+#workspaces button:hover {
+	background: @hover;
+	color: @fgcolor;
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+}
+
+#custom-cap-left, #custom-cap-right {
+	color: @bgcolor;
+	font-size: 24px;
+}
+
+#cpu, 
+#temperature, 
+#memory, 
+#disk,
+#custom-cpu-temp,
+#custom-gpu-temp,
+#clock, 
+#network {
+	background: @bgcolor;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#disk.critical {
+		color: @critical;
+}
+
+#temperature.critical {                                                           
+		color: @critical;                                                    
+}
+
+#cpu.critical {                                                           
+		color: @critical;                                                    
+}
+
+#memory.critical {                                                           
+		color: @critical;                                                    
+}
+
+
