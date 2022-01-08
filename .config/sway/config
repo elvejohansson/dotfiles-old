@@ -42,7 +42,7 @@ default_floating_border pixel 0
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.config/sway/bg.png fill
+output * bg ~/.config/sway/wallpapers/arch-light.png fill
 
 output HDMI-A-1 res 1920x1080@60.000Hz pos 0,0
 output DP-2 res 1920x1080@144.001Hz pos 1920,0
