@@ -63,7 +63,9 @@ bar {
 
 ### Output configuration
 #
-output * bg ~/.config/sway/wallpapers/arch-light.png fill
+output HDMI-A-1 bg ~/.config/sway/wallpapers/row-1-column-1.png fill
+output DP-2 bg ~/.config/sway/wallpapers/row-1-column-2.png fill
+output DP-3 bg ~/.config/sway/wallpapers/row-1-column-3.png fill
 
 # Screen configuration
 output HDMI-A-1 res 1920x1080@60.000Hz pos 0,0
