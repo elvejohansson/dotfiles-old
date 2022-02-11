@@ -24,30 +24,30 @@
     "disk": {
       "interval": 60,
       "format": "{percentage_used}% {path}",
-      "path": "/",
+      "path": "/home",
       "tooltip": false,
     }, 
     "network": {
       "interval": 1,
       "interface": "enp4s0",
       "format": "{ifname}",
-      "format-ethernet": "{ifname} {ipaddr}/{cidr} |  {bandwidthUpBits}  {bandwidthDownBits}",
+      "format-ethernet": "{ifname} {ipaddr}/{cidr} | \uf176 {bandwidthUpBits} \uf175 {bandwidthDownBits}",
       "format-disconnected": "Disconnected...",
       "tooltip": false,
     },
 
 
     "custom/cpulogo": {
-      "format": "",
+      "format": "\uf085",
     },
     "custom/memorylogo": {
-      "format": "", 
+      "format": "\uf2db", 
     },
     "custom/disklogo": {
-      "format": "",
+      "format": "\uf0a0",
     },
     "custom/networklogo": {
-      "format": "",
+      "format": "\uf0ac",
     },
     "custom/leftcap": {
       "format": "    ",
@@ -66,7 +66,7 @@
     "modules-right": ["clock"],
 
     "custom/logo": {
-      "format": "",
+      "format": "\uf17c",
     },
 
     "sway/workspaces": {
@@ -87,18 +87,18 @@
         "9": ["DP-3"]
       },
       "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "urgent": "",
-        "active": "",
-        "default": ""
+        "1": "\uf120",
+        "2": "\uf269",
+        "3": "\uf121",
+        "4": "\uf075",
+        "5": "\uf1bc",
+        "6": "\uf07c",
+        "7": "-",
+        "8": "-",
+        "9": "-",
+        "urgent": "-",
+        "active": "-",
+        "default": "-"
       }
     },
 
