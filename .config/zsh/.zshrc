@@ -2,9 +2,6 @@
 clear
 echo ""
 
-# I use arch btw
-neofetch
-
 # Enviroment variables
 EDITOR=nvim
 
@@ -36,6 +33,7 @@ export KEYTIMEOUT=1
 # Check if sources exist and them source them
 [ -f "$ZDOTDIR/alias.zsh" ] && source $ZDOTDIR/alias.zsh
 [ -f "$ZDOTDIR/theme.zsh" ] && source $ZDOTDIR/theme.zsh
+[ -f "$ZDOTDIR/git.zsh" ] && source $ZDOTDIR/git.zsh
 
 # Plugins
 [ -f "$ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
