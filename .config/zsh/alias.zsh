@@ -6,6 +6,7 @@ alias econf="$EDITOR $ZDOTDIR/.zshrc"
 alias ealias="$EDITOR $ZDOTDIR/alias.zsh"
 
 
+
 ##############################
 #             Git            #
 ##############################
@@ -21,13 +22,6 @@ alias gch="g checkout"
 alias gcb="g checkout -b"
 alias gd="g diff"
 
-# Dotfiles repo handler
-alias cs="config status"
-alias cc="config commit -m"
-alias ca="config add"
-alias cdf="config diff"
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 
 
 ##############################
@@ -36,6 +30,8 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias pacin="sudo pacman -S"
 alias pacrm="sudo pacman -Rns"
 alias pacup="sudo pacman -Syyu"
+alias pacop="pacman -Qtd"
+
 
 
 ##############################
@@ -51,6 +47,4 @@ alias ...=" cd ../.."
 #            Other           #
 ##############################
 alias ffs="sudo !!"
-
-
-
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
