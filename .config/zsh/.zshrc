@@ -1,6 +1,5 @@
 # Clear terminal when starting a new shell
 clear
-echo ""
 
 # Enviroment variables
 EDITOR=nvim
