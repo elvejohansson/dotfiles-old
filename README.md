@@ -8,7 +8,7 @@ This takes some general technical knowledge about Linux, the Linux filesystem, g
 
 1. Add this alias to your `.bashrc` or `.zshrc`: `alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'` (Used to manage the repo as it will be bare).
 2. `echo ".dotfiles" >> .gitignore`. (For avoiding recursion).
-3. `git clone --bare https://git.elvejohansson.dev/elvejohansson/dotfiles.git $HOME/.dotfiles`.
+3. `git clone --bare https://github.com/elvejohansson/dotfiles.git $HOME/.dotfiles`.
 4. `alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
 5. `config checkout` for checking out to your `$HOME` directory.
 6. `config config --local status.showUntrackedFiles no`
