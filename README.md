@@ -3,7 +3,11 @@ A bare git repository for managing my dotfiles and for easily setting up a new G
 
 Based on [this](https://www.atlassian.com/git/tutorials/dotfiles) article uploaded to [Atlassian](https://www.atlassian.com/).
 
-### Want to use these on your system?
+## Want to use these on your system?
+### Fast way
+`curl -Lks https://github.com/elvejohansson/dotfiles/raw/branch/main/install.sh | /bin/bash`
+
+### Manual install
 This takes some general technical knowledge about Linux, the Linux filesystem, git and shell scripts. [The article](https://www.atlassian.com/git/tutorials/dotfiles) goes in to more detail so read it if you want the full explanation.
 
 1. Add this alias to your `.bashrc` or `.zshrc`: `alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'` (Used to manage the repo as it will be bare).
