@@ -5,7 +5,7 @@ Based on [this](https://www.atlassian.com/git/tutorials/dotfiles) article upload
 
 ## Want to use these on your system?
 ### Fast way
-`curl -Lks https://github.com/elvejohansson/dotfiles/raw/branch/main/install.sh | /bin/bash`
+`curl -Lks https://raw.githubusercontent.com/elvejohansson/dotfiles/main/install.sh | /bin/bash`
 
 ### Manual install
 This takes some general technical knowledge about Linux, the Linux filesystem, git and shell scripts. [The article](https://www.atlassian.com/git/tutorials/dotfiles) goes in to more detail so read it if you want the full explanation.
