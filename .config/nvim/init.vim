@@ -1,9 +1,3 @@
-call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
-
-Plug 'andweeb/presence.nvim'
-
-call plug#end()
-
 syntax enable
 
 set number
