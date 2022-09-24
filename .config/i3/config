@@ -1,0 +1,15 @@
+set $mod Mod4
+
+for_window [class="^.*"] border pixel 0
+hide_edge_borders both
+
+bindsym $mod+Return exec alacritty
+bindsym $mod+q kill
+bindsym $mod+d exec dmenu_run
+bindsym $mod+Shift+c reload
+
+# Focus and splitting
+bindsym $mod+f fullscreen toggle
+
+font pango:Monaco 10
+
