@@ -3,6 +3,8 @@ clear
 
 # Enviroment variables
 EDITOR=nvim
+export GPG_TTY=$(tty)
+export PATH="$PATH:$HOME/.local/bin"
 
 # Colors
 autoload -Uz colors && colors
